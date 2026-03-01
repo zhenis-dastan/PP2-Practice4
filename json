@@ -1,0 +1,35 @@
+{
+  "name": "Ivan",
+  "age": 25
+}
+
+1
+import json
+data = {"name": "Ivan", "age": 25}
+json_data = json.dumps(data)
+print(json_data)
+
+2
+import json
+text = '{"name": "Ivan", "age": 25}'
+data = json.loads(text)
+print(data["name"])
+
+3
+import json
+data = {"name": "Ivan"}
+
+with open("data.json", "w") as f:
+    json.dump(data, f)
+
+4
+import json
+
+with open("data.json", "r") as f:
+    data = json.load(f)
+    print(data)
+
+5
+import json
+data = {"name": "Ivan", "age": 25}
+print(json.dumps(data, indent=4))
